@@ -1,0 +1,109 @@
+body {
+    background-image: url('/assets/background.jpeg');
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body input
+{
+    display: none;
+}
+
+#title-bar {
+    padding: 20px 10px 10px 10px;
+    background-color: white;
+}
+
+#title{
+    padding: 10px;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#menu-bar {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+#menu-bar label {
+    min-width: 130px;
+    text-decoration: none;
+    font-size: 18px;
+    outline: none;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+    padding: 10px;
+}
+
+#menu-bar label:hover {
+    font-weight: bold;
+    color: grey;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#tab-content{
+    height: 700px;
+    width: 100%;
+}
+
+#home-content, #sched-content, #info-content, #tool-content, #news-content {
+    display: none;
+}
+
+#home-content, #sched-content, #info-content, #tool-content, #news-content {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+#home-tog:checked~#title-bar #menu-bar #home-label, 
+#sched-tog:checked~#title-bar #menu-bar #sched-label, 
+#info-tog:checked~#title-bar #menu-bar #info-label,
+#tool-tog:checked~#title-bar #menu-bar #tool-label,
+#news-tog:checked~#title-bar #menu-bar #news-label {
+    font-weight: bold;
+    color: grey;
+}
+
+#home-tog:checked~#tab-content #home-content, 
+#sched-tog:checked~#tab-content #sched-content, 
+#info-tog:checked~#tab-content #info-content,
+#tool-tog:checked~#tab-content #tool-content,
+#news-tog:checked~#tab-content #news-content {
+    display: flex;
+}
+
+#footer { 
+    background-color: white;
+    display: flex;
+    padding: 10px;
+}
+
+#footer-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+#footer-contact div:first-of-type{
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 5px;
+}
